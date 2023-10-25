@@ -1,6 +1,6 @@
 using CleanBookShelf.Domain.Entites.BookAggregate;
 
-namespace CleanBookShelf.Application.interfaces;
+namespace CleanBookShelf.Application.Interfaces;
 
 public interface IBookRepository
 {
