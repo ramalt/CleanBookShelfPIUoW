@@ -6,12 +6,11 @@ public class Library
 {
     public int Id { get; private set; }
     public string Name { get; private set; }
-    private List<Book> _books;
+    private List<Book> _books = new();
+    public List<Book> Books => _books.ToList();
 
-    public Library(int id, string name)
+    public void AddBook(Book book)
     {
-        Id = id;
-        Name = name;
-        _books = new List<Book>();
+        _books.Add(book);
     }
 }

@@ -7,6 +7,6 @@ public interface ILibraryRepository
     Library GetById(int id);
     void Add(Library library);
     void Update(Library library);
-    void Remove(Library library);
+    void Remove(int id);
     List<Library> GetAll();
 }
