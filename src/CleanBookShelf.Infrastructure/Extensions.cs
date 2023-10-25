@@ -12,7 +12,7 @@ public static class Extensions
     public static void ConfigureServices(this IServiceCollection services)
     {
         services.AddDbContext<ApplicationDbContext>(opt => {
-            opt.UseSqlServer("");
+            opt.UseSqlServer("Server=localhost,1433;Database=BookshelfDb;User=sa;Password=Root1234!;TrustServerCertificate=true");
         });
 
         services.AddScoped<IBookRepository, BookRepository>();
