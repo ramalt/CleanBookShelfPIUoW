@@ -12,7 +12,7 @@ public class LibraryConfiguration : IEntityTypeConfiguration<Library>
 
         builder.HasKey(l => l.Id); // Kütüphanenin benzersiz kimliği olarak Id kullanın
 
-        builder.Property(l => l.Name).IsRequired().HasMaxLength(100); // Kütüphane adını zorunlu ve maksimum 100 karakter olarak ayarlayın
+        builder.Property(l => l.Name).IsRequired().HasMaxLength(100).HasColumnType("TEXT"); // Kütüphane adını zorunlu ve maksimum 100 karakter olarak ayarlayın
 
         // Kütüphane ile kitap arasında bir ilişki kurun
         builder.HasMany(l => l.Books)

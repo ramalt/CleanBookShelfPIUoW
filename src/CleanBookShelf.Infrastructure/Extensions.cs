@@ -13,6 +13,8 @@ public static class Extensions
     {
         services.AddDbContext<ApplicationDbContext>(opt => {
             opt.UseSqlServer("Server=localhost,1433;Database=BookshelfDb;User=sa;Password=Root1234!;TrustServerCertificate=true");
+            // opt.UseSqlite("Data Source=app.db");
+
         });
 
         services.AddScoped<IBookRepository, BookRepository>();
