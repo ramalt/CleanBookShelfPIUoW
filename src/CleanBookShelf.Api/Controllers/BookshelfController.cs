@@ -17,10 +17,5 @@ public class BookshelfController : ControllerBase
         _bookRepository = bookRepository;
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetBooks()
-    {
-        var response = _bookRepository.GetAll();
-        return Ok(response);
-    }
+    //TODO: create endpoints...
 }
