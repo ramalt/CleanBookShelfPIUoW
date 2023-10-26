@@ -1,6 +1,7 @@
 using CleanBookShelf.Application.interfaces;
 using CleanBookShelf.Application.Interfaces;
 using CleanBookShelf.Infrastructure.EFCore;
+using CleanBookShelf.Infrastructure.Persistence;
 using CleanBookShelf.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +18,8 @@ public static class Extensions
 
         });
 
-        services.AddScoped<IBookRepository, BookRepository>();
-        services.AddScoped<ILibraryRepository, LibraryRepository>();
+        // services.AddScoped<IBookRepository, BookRepository>();
+        // services.AddScoped<ILibraryRepository, LibraryRepository>();
+        services.AddScoped<IRepositoryManager, RepositoryManager>(); 
     }
 }

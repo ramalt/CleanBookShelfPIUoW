@@ -14,22 +14,10 @@ public class LibraryRepository : ILibraryRepository
 
     public Library GetById(int id) => _context.Libraries.Find(id);
 
-    public void Add(Library library)
-    {
-        _context.Libraries.Add(library);
-        _context.SaveChangesAsync();
-    }
+    public void Add(Library library) => _context.Libraries.Add(library);
 
-    public void Remove(int id)
-    {
-        var lib = _context.Libraries.Find(id);
-        _context.Remove(lib);
-        _context.SaveChangesAsync();
-    }
+    public void Remove(Library library) => _context.Remove(library);
 
-    public void Update(Library library)
-    {
-        _context.Libraries.Update(library);
-        _context.SaveChangesAsync();
-    }
+    public void Update(Library library) => _context.Libraries.Update(library);
+
 }

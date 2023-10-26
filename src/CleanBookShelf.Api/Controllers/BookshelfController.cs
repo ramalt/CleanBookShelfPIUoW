@@ -8,14 +8,13 @@ namespace CleanBookShelf.Api.Controllers;
 [Route("api/[controller]")]
 public class BookshelfController : ControllerBase
 {
-    private readonly IBookRepository _bookRepository;
-    private readonly ILibraryRepository _libraryRepository;
+    private readonly IRepositoryManager _repository;
 
-    public BookshelfController(ILibraryRepository libraryRepository, IBookRepository bookRepository)
+    public BookshelfController(IRepositoryManager repository)
     {
-        _libraryRepository = libraryRepository;
-        _bookRepository = bookRepository;
+        _repository = repository;
     }
+
 
     //TODO: create endpoints...
 }
